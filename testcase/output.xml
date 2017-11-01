@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171101 13:05:48.219" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/Aorarale/Desktop/RobotFlyingdogz/testcase/flyingdogz.robot" id="s1" name="Flyingdogz">
+<test id="s1-t1" name="TC_01_Login website using User: admin, Password: 1234">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${Flyingdogz_URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:48.304" level="INFO">Opening browser 'chrome' to base url 'https://flyingdogz.github.io/'</msg>
+<status status="PASS" endtime="20171101 13:05:50.938" starttime="20171101 13:05:48.303"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20171101 13:05:51.940" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20171101 13:05:51.941" starttime="20171101 13:05:50.939"></status>
+</kw>
+<kw name="Input Username">
+<arguments>
+<arg>${set_username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_username_locator}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:51.942" level="INFO">Typing text 'admin' into text field '//*[@name="username"]'</msg>
+<status status="PASS" endtime="20171101 13:05:52.046" starttime="20171101 13:05:51.942"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:52.046" starttime="20171101 13:05:51.941"></status>
+</kw>
+<kw name="Input Password">
+<arguments>
+<arg>${set_password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_password_locator}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:52.047" level="INFO">Typing text '1234' into text field '//*[@name="password"]'</msg>
+<status status="PASS" endtime="20171101 13:05:52.127" starttime="20171101 13:05:52.047"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:52.127" starttime="20171101 13:05:52.046"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${txt_password_locator}</arg>
+</arguments>
+<status status="PASS" endtime="20171101 13:05:52.151" starttime="20171101 13:05:52.128"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20171101 13:05:54.153" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20171101 13:05:54.153" starttime="20171101 13:05:52.151"></status>
+</kw>
+<kw name="Click Login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${button_login_locator}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:54.154" level="INFO">Clicking element '//*[@class="btn btn-primary"]'.</msg>
+<status status="PASS" endtime="20171101 13:05:54.323" starttime="20171101 13:05:54.154"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:54.323" starttime="20171101 13:05:54.154"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20171101 13:05:55.325" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20171101 13:05:55.326" starttime="20171101 13:05:54.323"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:55.326" critical="yes" starttime="20171101 13:05:48.302"></status>
+</test>
+<test id="s1-t2" name="TC_02_Verify table User List and one user as initial.">
+<kw name="Verify Table UserList">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${txt_verify_table_userlist_locator}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:55.344" level="INFO">Current page contains element 'xpath=//div[@class="panel-heading"][contains(text(), 'User List')]'.</msg>
+<status status="PASS" endtime="20171101 13:05:55.344" starttime="20171101 13:05:55.328"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:55.344" starttime="20171101 13:05:55.327"></status>
+</kw>
+<kw name="Verify User Initial">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${txt_verify_user_initial_locator}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:55.361" level="INFO">Current page contains element 'xpath=//table[@class="table table-hover"]//tr//td[contains(text(), 'Username')]'.</msg>
+<status status="PASS" endtime="20171101 13:05:55.361" starttime="20171101 13:05:55.345"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:55.361" starttime="20171101 13:05:55.345"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20171101 13:05:56.364" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20171101 13:05:56.364" starttime="20171101 13:05:55.362"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:56.365" critical="yes" starttime="20171101 13:05:55.327"></status>
+</test>
+<test id="s1-t3" name="TC_03_Add new user by adding New User Name and New User Password and click Add button.">
+<kw name="Input NewUserName">
+<arguments>
+<arg>${set_newusername}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_newUserName_locator}</arg>
+<arg>${newusername}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:56.367" level="INFO">Typing text 'user2' into text field '//*[@name="newUserName"]'</msg>
+<status status="PASS" endtime="20171101 13:05:56.451" starttime="20171101 13:05:56.366"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:56.451" starttime="20171101 13:05:56.366"></status>
+</kw>
+<kw name="Input NewUserPassword">
+<arguments>
+<arg>${set_newuserpassword}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_newUserPassword_locator}</arg>
+<arg>${newuserpassword}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:56.452" level="INFO">Typing text '1234' into text field '//*[@name="newUserPassword"]'</msg>
+<status status="PASS" endtime="20171101 13:05:56.533" starttime="20171101 13:05:56.452"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:56.533" starttime="20171101 13:05:56.451"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${txt_newUserPassword_locator}</arg>
+</arguments>
+<status status="PASS" endtime="20171101 13:05:56.556" starttime="20171101 13:05:56.533"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20171101 13:05:58.558" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20171101 13:05:58.558" starttime="20171101 13:05:56.556"></status>
+</kw>
+<kw name="Click Add NewUser">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${button_add_locator}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:58.559" level="INFO">Clicking element '//*[@class="btn btn-primary"]'.</msg>
+<status status="PASS" endtime="20171101 13:05:58.614" starttime="20171101 13:05:58.559"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:58.614" starttime="20171101 13:05:58.558"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20171101 13:05:59.617" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20171101 13:05:59.617" starttime="20171101 13:05:58.614"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:59.617" critical="yes" starttime="20171101 13:05:56.365"></status>
+</test>
+<test id="s1-t4" name="TC_04_Verify new user is added to User List table.">
+<kw name="Verify NewUser">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${txt_verify_newUser_locator}</arg>
+</arguments>
+<msg timestamp="20171101 13:05:59.635" level="INFO">Current page contains element 'xpath=//table[@class="table table-hover"]//tr[last()]//td[contains(text(), 'user2')]'.</msg>
+<status status="PASS" endtime="20171101 13:05:59.636" starttime="20171101 13:05:59.619"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:05:59.636" starttime="20171101 13:05:59.619"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20171101 13:06:00.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20171101 13:06:00.637" starttime="20171101 13:05:59.636"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:06:00.637" critical="yes" starttime="20171101 13:05:59.618"></status>
+</test>
+<test id="s1-t5" name="TC_05_Delete the user created in step 3 by clicking Bin button.">
+<kw name="Click Delete">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${button_delete_locator}</arg>
+</arguments>
+<msg timestamp="20171101 13:06:00.639" level="INFO">Clicking element 'xpath=//table[@class="table table-hover"]//tr[last()]//span[contains(@class,'glyphicon glyphicon-trash')]'.</msg>
+<status status="PASS" endtime="20171101 13:06:00.704" starttime="20171101 13:06:00.639"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:06:00.704" starttime="20171101 13:06:00.638"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20171101 13:06:01.706" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20171101 13:06:01.706" starttime="20171101 13:06:00.705"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171101 13:06:01.769" starttime="20171101 13:06:01.706"></status>
+</kw>
+<status status="PASS" endtime="20171101 13:06:01.770" critical="yes" starttime="20171101 13:06:00.638"></status>
+</test>
+<status status="PASS" endtime="20171101 13:06:01.771" starttime="20171101 13:05:48.222"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Flyingdogz" pass="5">Flyingdogz</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
