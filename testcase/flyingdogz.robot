@@ -10,10 +10,10 @@ ${txt_password_locator}    //*[@name="password"]
 
 ${txt_verify_table_userlist_locator}    xpath=//div[@class="panel-heading"][contains(text(), 'User List')]
 ${txt_verify_user_initial_locator}    xpath=//table[@class="table table-hover"]//tr//td[contains(text(), 'Username')]
+${txt_verify_newUser_locator}    xpath=//table[@class="table table-hover"]//tr[last()]//td[contains(text(), 'user2')]
 
 ${txt_newUserName_locator}    //*[@name="newUserName"]
 ${txt_newUserPassword_locator}    //*[@name="newUserPassword"]
-${txt_verify_newUser_locator}    xpath=//table[@class="table table-hover"]//tr[last()]//td[contains(text(), 'user2')]
 
 ${button_login_locator}    //*[@class="btn btn-primary"]
 ${button_add_locator}    //*[@class="btn btn-primary"]
