@@ -43,12 +43,12 @@ Verify User Initial
     Page Should Contain Element    ${txt_verify_user_initial_locator}
 
 Input NewUserName
-    [Arguments]    ${newusername}
-    Input Text    ${txt_newUserName_locator}    ${newusername}
+    [Arguments]    ${new_username}
+    Input Text    ${txt_newUserName_locator}    ${new_username}
 
 Input NewUserPassword
-    [Arguments]    ${newuserpassword}
-    Input Text    ${txt_newUserPassword_locator}    ${newuserpassword}
+    [Arguments]    ${new_user_password}
+    Input Text    ${txt_newUserPassword_locator}    ${new_user_password}
 
 Click Add NewUser
     Click Element    ${button_add_locator}
